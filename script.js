@@ -1,27 +1,36 @@
-const messages = [
-    "Are you sure?",
-    "Really sure??",
-    "Are you positive?",
-    "Pookie please...",
-    "Just think about it!",
-    "If you say no, I will be really sad...",
-    "I will be very sad...",
-    "I will be very very very sad...",
-    "Ok fine, I will stop asking...",
-    "Just kidding, say yes please! ❤️"
+const storySteps = [
+    "I met a young lad at Bowring...",
+    "He was rude",
+    "But that's alright... everyone is rude",
+    "and vicious.....sometimes......",
+    "He ate all the cheesecake",
+    "And called me ugly!",
+    "But ... were still Friend!",
+    "Happy 30th Birthday XD"
 ];
 
-let messageIndex = 0;
+let storyIndex = 0;
 
-function handleNoClick() {
-    const noButton = document.querySelector('.no-button');
-    const yesButton = document.querySelector('.yes-button');
-    noButton.textContent = messages[messageIndex];
-    messageIndex = (messageIndex + 1) % messages.length;
-    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    yesButton.style.fontSize = `${currentSize * 1.5}px`;
+function handleNext() {
+    storyIndex++;
+    
+    if (storyIndex < storySteps.length) {
+        // Update the text
+        document.getElementById('story-text').textContent = storySteps[storyIndex];
+        
+        // Optional: Make the "Next" button grow bigger each time like your original code
+        const yesButton = document.querySelector('.yes-button');
+        const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+        yesButton.style.fontSize = `${currentSize * 1.2}px`;
+
+    } else {
+        // Story finished! Redirect to the final page
+        window.location.href = "yes_page.html";
+    }
 }
 
-function handleYesClick() {
-    window.location.href = "yes_page.html";
+function handleSkip() {
+    // Redirect to your snake giphy page
+    // Ensure "snake_penalty.html" exists in your GitHub repo
+    window.location.href = "snake_penalty.html";
 }
