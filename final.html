@@ -2,24 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surprise!</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background-color: #ffebee; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: 'Arial Black', sans-serif; text-align: center; }
+        .container { background: white; padding: 40px; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); width: 85%; max-width: 500px; }
+        h1 { font-size: 2.5rem; color: #d32f2f; margin-bottom: 20px; }
+        img { width: 100%; max-width: 350px; border-radius: 20px; }
+        button { background-color: #ff0000; color: white; border: none; padding: 15px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 15px; cursor: pointer; box-shadow: 0 8px #990000; position: relative; margin-top: 20px; }
+        button:active { box-shadow: 0 2px #990000; transform: translateY(6px); }
+    </style>
 </head>
 <body>
     <div class="container" id="main-content">
         <h1>Your Doppelganger!</h1>
-        <img src="https://media.giphy.com/media/fSD3yT23GL0SPqEIqF/giphy.gif">
+        <img src="https://media.giphy.com/media/fSD3yT23GL0SPqEIqF/giphy.gif" alt="Fat Pig">
     </div>
 
     <script>
         setTimeout(() => {
             document.getElementById('main-content').innerHTML = `
-                <h1>Just kidding...</h1>
-                <img src="https://media.giphy.com/media/Emp6vfM3aBL7ymCcwV/giphy.gif">
-                <h1>Friends for Life!</h1>
+                <h1 style="color: #d32f2f;">Just kidding...</h1>
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDd1OW83NGE3ZWphZjhxd3o0N2k5cTg3Z2JjYjlhcm5nMmpyazE1MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Emp6vfM3aBL7ymCcwV/giphy.gif" alt="Porky Pig">
+                <h1 style="font-size: 2.5rem; margin-top:15px;">Friends for Life!</h1>
                 <button onclick="location.href='index.html'">RESTART</button>
             `;
-        }, 3000);
+        }, 3000); 
     </script>
 </body>
 </html>
