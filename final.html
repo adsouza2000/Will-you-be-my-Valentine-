@@ -7,17 +7,19 @@
 </head>
 <body>
     <div class="container" id="main-content">
-        <img src="https://media.giphy.com/media/GuWSJPF6bEkKs/giphy.gif" width="300">
+        <img src="https://media.giphy.com/media/fSD3yT23GL0SPqEIqF/giphy.gif" width="300">
+        <h1>Here is your doppelganger!</h1>
     </div>
 
     <script>
+        // After 3 seconds, the "Just Kidding" reveal happens
         setTimeout(() => {
             document.getElementById('main-content').innerHTML = `
-                <h1>Just kidding...</h1>
-                <img src="your-attached-image.jpg" width="350" style="border-radius: 20px;">
-                <h2>Siblings for life! Bye!</h2>
+                <h1 style="color: #ff4081;">Just kidding...</h1>
+                <img src="https://media.giphy.com/media/Emp6vfM3aBL7ymCcwV/giphy.gif" width="300">
+                <h2>Friends for Life!</h2>
             `;
-        }, 3000); // Changes after 3 seconds
+        }, 3000); 
     </script>
 </body>
 </html>
