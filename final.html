@@ -7,17 +7,17 @@
 </head>
 <body>
     <div class="container" id="main-content">
-        <img src="https://media.giphy.com/media/fSD3yT23GL0SPqEIqF/giphy.gif" width="300">
         <h1>Here is your doppelganger!</h1>
+        <img src="https://media.giphy.com/media/fSD3yT23GL0SPqEIqF/giphy.gif" alt="Fat Pig">
     </div>
 
     <script>
-        // After 3 seconds, the "Just Kidding" reveal happens
         setTimeout(() => {
             document.getElementById('main-content').innerHTML = `
-                <h1 style="color: #ff4081;">Just kidding...</h1>
-                <img src="https://media.giphy.com/media/Emp6vfM3aBL7ymCcwV/giphy.gif" width="300">
-                <h2>Friends for Life!</h2>
+                <h1 style="color: #d32f2f;">Just kidding...</h1>
+                <img src="https://media.giphy.com/media/Emp6vfM3aBL7ymCcwV/giphy.gif" alt="Porky Pig">
+                <h2 style="font-size: 2rem;">Friends for Life!</h2>
+                <button onclick="location.href='index.html'">Restart?</button>
             `;
         }, 3000); 
     </script>
