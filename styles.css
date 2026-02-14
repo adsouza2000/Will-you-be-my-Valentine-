@@ -1,65 +1,68 @@
-/* Centers everything on the screen */
+/* Centers the container perfectly in the middle of the screen */
 body {
     background-color: #ffebee;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
-    font-family: 'Arial Rounded MT Bold', 'Helvetica', sans-serif;
+    font-family: 'Arial Black', 'Arial Bold', sans-serif;
     text-align: center;
 }
 
 .container {
     background: white;
-    padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    max-width: 400px;
-    width: 90%;
+    padding: 50px;
+    border-radius: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    width: 80%;
+    max-width: 600px;
 }
 
-/* Big, readable text */
+/* Makes all headings large and bold */
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: #d32f2f;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 p {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
 }
 
-/* 3D Red Buttons */
+/* The 3D Red Button Style */
 button {
-    background-color: #ff5252;
+    background-color: #ff0000;
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 20px 50px;
+    font-size: 1.8rem;
     font-weight: bold;
-    border-radius: 12px;
+    border-radius: 20px;
     cursor: pointer;
-    margin: 10px;
-    transition: all 0.2s ease;
-    /* This creates the 3D "Shadow" effect */
-    box-shadow: 0 6px #b71c1c;
+    margin: 15px;
+    transition: all 0.1s;
+    /* The 3D Shadow */
+    box-shadow: 0 10px #880000;
     position: relative;
 }
 
 button:active {
-    /* Push the button down when clicked */
-    box-shadow: 0 2px #b71c1c;
-    top: 4px;
+    box-shadow: 0 3px #880000;
+    transform: translateY(7px);
 }
 
 button:hover {
-    background-color: #ff1744;
+    background-color: #ff3333;
 }
 
+/* Ensures images (GIFs) are large and clear */
 img {
-    max-width: 100%;
-    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 25px;
     margin: 20px 0;
 }
