@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Surprise!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="main-content">
+        <img src="https://media.giphy.com/media/GuWSJPF6bEkKs/giphy.gif" width="300">
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('main-content').innerHTML = `
+                <h1>Just kidding...</h1>
+                <img src="your-attached-image.jpg" width="350" style="border-radius: 20px;">
+                <h2>Siblings for life! Bye!</h2>
+            `;
+        }, 3000); // Changes after 3 seconds
+    </script>
+</body>
+</html>
